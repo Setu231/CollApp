@@ -1,0 +1,9 @@
+<service>
+	<id>collapp</id>
+	<name>collapp</name>
+	<description>This service runs collapp, an open-source issue/project management tool designed for small teams.</description>
+	<executable>java</executable>
+	<arguments>-Ddatasource.dialect=HSQLDB -Ddatasource.url=jdbc:hsqldb:mem:collapp -Ddatasource.username=sa -Ddatasource.password= -Dspring.profiles.active=dev -jar ..\..\collapp\collapp-jetty-console.war</arguments>
+	<logmode>rotate</logmode>
+    <stopparentprocessfirst>true</stopparentprocessfirst>
+</service>
